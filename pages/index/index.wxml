@@ -1,0 +1,12 @@
+<!--index.wxml-->
+<view class="container">
+    <map id="myMap" longitude="{{longdata}}" latitude="{{latidata}}" scale="12"  bindregionchange="getCenterLocation" markers='{{markers}}' show-location  style="width: 100%; height: 300px;"></map>
+</view>
+ <block wx:for="{{dataArray}}" wx:key="{{key}}">
+<view class='list-box'>
+<text class='list-title'>{{item.title}}</text>
+<text class='list-time'>{{item.time}}</text>
+<text class='list-content'>{{item.contentText}}</text>
+<view class='sp-line'></view>
+</view>
+ </block>
